@@ -30,7 +30,7 @@ namespace TaskManager
 
                 foreach (var verb in startInfo.Verbs)
                 {
-                    Console.WriteLine($"{i++}.{verb}");
+                    Logger.Log($"{i++}.{verb}");
                 }
 
                 startInfo.WindowStyle = ProcessWindowStyle.Normal;

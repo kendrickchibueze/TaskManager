@@ -26,6 +26,8 @@ namespace TaskManager
             }
 
             Logger.Log("**************************************************************");
+
+            Utility.AskUserNextAction();
         }
 
 
