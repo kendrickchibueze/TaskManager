@@ -53,6 +53,12 @@ namespace TaskManager
                 case 5:
                     CustomThread();
                     break;
+                case 6:
+                    CheckThreadAliveAndBackground();
+                    break;
+                default:
+                    Logger.Log("Please choose a valid option...");
+                    break;
             }
 
 

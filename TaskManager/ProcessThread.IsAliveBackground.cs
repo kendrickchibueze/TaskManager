@@ -15,21 +15,41 @@ namespace TaskManager
         private static void checkAlive()
         {
             bool isAlive = Thread.CurrentThread.IsAlive;
+
             if (isAlive)
             {
                 Logger.Log("Thread is alive");
             }
-            Logger.Log("Thread is not alive");
+            else
+            {
+                Logger.Log("Thread is not alive");
+
+            }
+
+            Utility.AskUserNextAction();
+
         }
         private static void checkBackground()
         {
             bool isBackground = Thread.CurrentThread.IsBackground;
-            Console.WriteLine(isBackground ? "This is a background thread" : "This is not a background thread");
+
+            if (isBackground)
+            {
+                Logger.Log("This is a background thread");
+            }
+            else
+            {
+                Logger.Log("This is not a background thread");
+            }
+
+            Utility.AskUserNextAction();
+            
         }
 
 
         public static void CheckThreadAliveAndBackground()
         {
+            Console.Clear();
 
             Logger.Log("1. Check if thread is Alive\n2. Check for  Background");
 

@@ -17,13 +17,17 @@ namespace TaskManager
             
             MainMenu();
 
+            PrintColorMessage(ConsoleColor.Cyan, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
             PrintColorMessage(ConsoleColor.Yellow, "\n\nControls: " +
                "\n1.Start Process" +
                "\n2.Kill a Process" +
                "\n3.List all Running Process" +
                "\n4.Start and Kill custom process"+
-               "\n5.Custom Thread" +
-               "\n6.Exit");
+               "\n5.Start Custom Thread" +
+               "\n6.Check Thread Alive/Background"+
+               "\n7.Exit\n");
+
+            PrintColorMessage(ConsoleColor.Cyan, "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 
         }
 
