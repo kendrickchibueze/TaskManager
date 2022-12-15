@@ -51,7 +51,7 @@ namespace TaskManager
         {
             Console.Clear();
 
-            Logger.Log("1. Check if thread is Alive\n2. Check for  Background");
+            start: Logger.Log("1. Check if thread is Alive\n2. Check for  Background");
 
             try
             {
@@ -67,12 +67,21 @@ namespace TaskManager
                         break;    
                     default:
                         Logger.Log("please choose the right options");
+                        goto start;
                         break;
                 }
             }
             catch (FormatException ex)
             {
                 Logger.ErrorLog($"An error occured. {ex.Message}");
+
+                goto start;
+
+            }catch(Exception ex)
+            {
+                Logger.ErrorLog(ex.Message);
+
+                goto start;
             }
 
 

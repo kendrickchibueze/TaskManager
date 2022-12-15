@@ -36,32 +36,46 @@ namespace TaskManager
         {
             Utility.NextMenu();
 
-            Logger.Log("\nEnter your choice : ");
-
-            switch (Utility.GetUserInput())
+            start: Logger.Log("\nEnter your choice : ");
+            try
             {
-                case 1:
-                    StartProcess();
-                    break;
-                case 2:
-                    KillProcess();
-                    break;
-                case 3:
-                    EnumeratingProcess();
-                    break;
-                case 4:
-                    StartingAndStoppingCustomProcess();
-                    break ;
-                case 5:
-                    CustomThread();
-                    break;
-                case 6:
-                    CheckThreadAliveAndBackground();
-                    break;
-                default:
-                    Logger.Log("Please choose a valid option...");
-                    break;
+                switch (Utility.GetUserInput())
+                {
+                    case 1:
+                        StartProcess();
+                        break;
+                    case 2:
+                        KillProcess();
+                        break;
+                    case 3:
+                        EnumeratingProcess();
+                        break;
+                    case 4:
+                        StartingAndStoppingCustomProcess();
+                        break;
+                    case 5:
+                        CustomThread();
+                        break;
+                    case 6:
+                        CheckThreadAliveAndBackground();
+                        break;
+                    case 7:
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Logger.Log("Please choose a valid option...");
+                        break;
+                }
+
             }
+            catch(Exception ex)
+            {
+                Logger.ErrorLog(ex.Message);
+                goto start;
+
+            }
+
+          
 
 
         }

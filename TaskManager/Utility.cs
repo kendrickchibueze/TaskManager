@@ -62,22 +62,40 @@ namespace TaskManager
 
         public static void AskUserNextAction()
         {
-            Logger.Log("\npress 1 to return to main menu and 0 to exit");
 
-            int inputAction = int.Parse(Console.ReadLine());
+            start: Logger.Log("\npress 1 to return to main menu and 0 to exit");
 
-            switch (inputAction) {
-                case 1:
-                    Console.Clear();
-                    ProcessThread.EvaluateUserTaskChoice();
-                    break;
-                 case 0:
-                    Environment.Exit(0);
-                    break;
-                    
-                    
-            
+            try
+            {
+
+                int inputAction = int.Parse(Console.ReadLine());
+
+                switch (inputAction)
+                {
+                    case 1:
+                        Console.Clear();
+                        ProcessThread.EvaluateUserTaskChoice();
+                        break;
+                    case 0:
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Logger.ErrorLog("Enter a vlaid input..");
+                        goto start;
+                        break;
+
+
+
+                }
+
             }
+            catch (Exception ex)
+            {
+                Logger.ErrorLog(ex.Message);
+                goto start;
+
+            }
+          
 
         }
 
