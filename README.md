@@ -19,7 +19,7 @@ A pragmatic view of our application looks like this:
 * **Project Type**: Console
 * **IDE**: Visual Studio (Version 2022)
 * **Paradigm or pattern of programming**: Object-Oriented Programming (OOP)
-* **Error Handling**:I implemented Error handling in this console application.
+* **Error Handling**: I implemented Error handling in this console application.
 * **Data**: The processes on my system provide it.
 
 **NOTE**: _This console application is subject to future  reviews, suggestions and retrofits_.🛴🔥😎
